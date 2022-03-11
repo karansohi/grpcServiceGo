@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package service;
+
+message Info{
+    string name = 1;
+    string school = 2;
+    int32 age = 3;
+    float gpa = 4;
+}
+
+service InfoService{
+    rpc InfoObtained(Info) returns (Info) {}
+} 
